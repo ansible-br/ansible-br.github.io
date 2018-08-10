@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.46" />
+    <meta name="description" content="Destrinchando as novas funcionalidades do Ansible 2.4">
+
+
+    <title>Ansible 2.4 — Novas funcionalidades e Módulos :: Documentação Ansible-br</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/horsey.css" rel="stylesheet">
+    
+    <link href="/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	<p>Documentação Ansible-br</p>
+
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Pesquisar...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/horsey.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/ansible-br.github.io\/";
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+    
+  </div>
+
+  
+    <ul class="topics">
+        
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/por-que-ansible/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/por-que-ansible/">
+        <span><i class='fa fa-question-circle'></i>Por que Ansible?</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/por-que-ansible/all-in-one/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/por-que-ansible/all-in-one/">
+        <span>All-in-one: Tudo em um</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/gerencia-configuracao/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/gerencia-configuracao/">
+        <span>Gerência de Configuração</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/orquestracao/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/orquestracao/">
+        <span>Orquestração</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/provisionamento/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/provisionamento/">
+        <span>Provisionamento</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/curva-aprendizado/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/curva-aprendizado/">
+        <span>Curva de Aprendizado</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/infra-mutavel/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/infra-mutavel/">
+        <span>Infra Mutável</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/sem-agentes/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/sem-agentes/">
+        <span>Sem agentes</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/quem-usa/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/quem-usa/">
+        <span>Quem usa?</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/faq/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/faq/">
+        <span>FAQ</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/">
+        <span><i class='fa fa-chevron-circle-right'></i>Primeiros Passos</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/guia-rapido/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/guia-rapido/">
+        <span>Guia Rápido</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-1/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-1/">
+        <span>Passo 1 - Repositório</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-2/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-2/">
+        <span>Passo 2 - Instalação</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-3/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-3/">
+        <span>Passo 3 - Ad-Hoc</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-4/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-4/">
+        <span>Passo 4 - Módulos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-5/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-5/">
+        <span>Passo 5 - Inventário</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-6/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-6/">
+        <span>Passo 6 - Playbook</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-7/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-7/">
+        <span>Passo 7 - Dicas e truques</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/recap/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/recap/">
+        <span>Recapitulando</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/materiais-de-estudo/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/materiais-de-estudo/">
+        <span>Materiais de Estudo</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/livros/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/livros/">
+        <span>Livros</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/cursos/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/cursos/">
+        <span>Cursos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/webinars/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/webinars/">
+        <span>Webinars</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/sites-referencia/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/sites-referencia/">
+        <span>Sites de Referência</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/windows-e-ansible/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/windows-e-ansible/">
+        <span>Windows e Ansible</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/windows-e-ansible/windows-1/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/windows-e-ansible/windows-1/">
+        <span>Windows - Conceitos Básicos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/windows-e-ansible/windows-2/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/windows-e-ansible/windows-2/">
+        <span>Windows - Pré-requisitos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/aprenda-mais/" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/aprenda-mais/">
+        <span><i class='fa fa-mortar-board'></i>Aprenda mais</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/aprenda-mais/changelogs/" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/aprenda-mais/changelogs/">
+        <span>Changelogs</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/aprenda-mais/changelogs/ansible-2.4-import-include/" class="dd-item
+     
+      ">
+        <a href="/aprenda-mais/changelogs/ansible-2.4-import-include/">
+        <span>Ansible 2.4 — Include x Import</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/" class="dd-item
+     active
+      ">
+        <a href="/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/">
+        <span>Ansible 2.4 — Novas funcionalidades e Módulos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/search/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/search/">
+        <span>Sobre a busca</span>
+
+        
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+              
+    </li>
+  
+ 
+
+          
+        
+
+        
+        <section id="shortcuts">
+            
+                <li class="" role="">
+                    <h3>Mais</h3>
+                    <a href="https://t.me/ansiblebr/"><i class='fa fa-telegram'></i> Grupo Telegram</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://infraascode.slack.com"><i class='fa fa-slack'></i> Slack Infra-as-Code</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="http://docs.ansible.com/ansible/latest/index.html"><i class='fa fa-bookmark'></i> Documentação Oficial Ansible</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://github.com/ansible-br/site-hugo/"><i class='fa fa-github'></i> Repositório Github</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="/creditos"><i class='fa fa-bullhorn'></i> Créditos</a>
+                    
+                </li>
+            
+        </section>    
+        
+        
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Limpar Histórico</a>
+        
+
+        
+    </ul>
+    
+     
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/ansible-br/site-hugo/edit/master/content/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Editar página
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/'>Documentação Ansible-br</a> > <a href='/aprenda-mais/'>Aprenda mais</a> > <a href='/aprenda-mais/changelogs/'>Changelogs</a> > Ansible 2.4 — Novas funcionalidades e Módulos
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#o-que-há-de-novo">O que há de novo?</a>
+<ul>
+<li><a href="#modernização">Modernização:</a></li>
+<li><a href="#playbooks">Playbooks:</a></li>
+<li><a href="#inventário">Inventário:</a></li>
+<li><a href="#escalar-privilégios-no-windows">Escalar privilégios no Windows:</a></li>
+<li><a href="#filtros">Filtros:</a></li>
+<li><a href="#módulos">Módulos:</a></li>
+<li><a href="#ansible-vault">Ansible Vault:</a></li>
+<li><a href="#automação-de-rede-networking">Automação de Rede (Networking):</a></li>
+<li><a href="#migrando-versões-anteriores">Migrando versões anteriores:</a></li>
+<li><a href="#referências">Referências:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Ansible 2.4 — Novas funcionalidades e Módulos</h1>
+          
+
+
+
+
+
+
+<h2 id="o-que-há-de-novo">O que há de novo?</h2>
+
+<p>A seguir uma série de funcionalidades e novos módulos que vieram nesta nova versão 2.4:</p>
+
+<h3 id="modernização">Modernização:</h3>
+
+<p>O Ansible agora suporta plenamente o Python 3 bem como o inventário no formato baseado em YAML.</p>
+
+<h3 id="playbooks">Playbooks:</h3>
+
+<p>Diretiva <code>order</code>: Agora é possível modificar a ordem que o Ansible processa os hosts quando dispara as tasks.</p>
+
+<pre><code>- hosts: all
+  order: sorted
+  gather_facts: False
+
+  tasks:
+    - debug: var=inventory_hostname
+</code></pre>
+
+<p>Possíveis valores para a diretiva <code>order</code>:</p>
+
+<div class="alert 
+	alert-info"
+ 
+role="alert"><p><strong>inventory:</strong>
+O padrão. A ordem conforme inserção no arquivo de inventário</p>
+
+<p><strong>reverse_inventory:</strong>
+Como o nome já diz, reverte a ordem de inserção do arquivo de inventário.</p>
+
+<p><strong>sorted:</strong>
+Os Hosts são ordenados alfabeticamente pelo nome.</p>
+
+<p><strong>reverse_sorted:</strong>
+Os Hosts são ordenados alfabeticamente invertidos pelo nome.</p>
+
+<p><strong>shuffle:</strong>
+Os Hosts são aleatoriamente ordenados a cada execução.</p>
+</div>
+
+
+<h3 id="inventário">Inventário:</h3>
+
+<ul>
+<li>Agora é possível especificar múltiplos arquivos de inventário na linha de comando:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>$ ansible-playbook -i /etc/hosts1 -i /opt/hosts2 play.yml
+</code></pre>
+
+<ul>
+<li>Novos Plugins de inventário: <a href="https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/inventory/host_list.py"><strong>host_list</strong></a> e <a href="https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/inventory/advanced_host_list.py"><strong>advanced_host_list</strong></a>: com ele é possível executar comandos <strong>sem arquivo de inventário previamente definido:</strong></li>
+</ul>
+
+<p><em>Diretamente com IPs:</em></p>
+
+<pre><code>$ ansible -i ‘10.10.2.6, 10.10.2.4’ -m ping all
+</code></pre>
+
+<p><em>Com nomes DNS:</em></p>
+
+<pre><code>$ ansible -i ‘host1.example.com, host2’ -m user -a ‘name=me state=absent’ all
+</code></pre>
+
+<p><em>Para o localhost:</em></p>
+
+<pre><code>$ ansible-playbook -i ‘localhost,’ play.yml -c local
+</code></pre>
+
+<p><em>Modo avançado:</em></p>
+
+<pre><code>$ ansible -i ‘host[1:10],’ -m ping
+</code></pre>
+
+<ul>
+<li>Formato <a href="https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/inventory/yaml.py"><strong>YAML para o inventário</strong></a>. Modelo:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>  all: # a chave deve ser única, somente um 'hosts' por grupo
+      hosts:
+          test1:
+          test2:
+              var1: value1
+      vars:
+          group_var1: value2
+      children:   # ordem da chave não é importante, indentação sim
+          other_group:
+              children:
+                  group_x:
+                      hosts:
+                          test5
+              vars:
+                  g2_var2: value3
+              hosts:
+                  test4:
+                      ansible_host: 127.0.0.1
+          last_group:
+              hosts:
+                  test1 # mesmo host como acima, membro adicional de um grupo
+              vars:
+                  last_var: MYVALUE
+</code></pre>
+
+<h3 id="escalar-privilégios-no-windows">Escalar privilégios no Windows:</h3>
+
+<p>Método <code>runas</code> está disponível para ambientes Windows. Agora o Ansible trabalha com todos os tipos de autenticação e irá auto elevar sob UAC (controle da conta de usuário) se WinRM for usado como privilégio “Atuar como parte do sistema operacional”.</p>
+
+<pre><code>--become-method=BECOME_METHOD
+                        privilege escalation method to use  
+                        (default=sudo),
+                        valid choices: [ sudo | su | pbrun | pfexec
+                        | doas | dzdo | ksu | runas | pmrun ]
+</code></pre>
+
+<h3 id="filtros">Filtros:</h3>
+
+<ul>
+<li>Plugin de Filtros <a href="https://docs.ansible.com/ansible/devel/plugins/lookup/hiera.html"><strong>hiera</strong></a>: Agora é possível obter dados de arquivos hiera do Puppet. Exemplo:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: &quot;a value from Hiera 'DB'&quot;
+  debug: msg={{ lookup('hiera', 'foo') }}
+</code></pre>
+
+<h3 id="módulos">Módulos:</h3>
+
+<ul>
+<li>Módulo de pacotes <a href="http://docs.ansible.com/ansible/latest/yum_module.html"><strong>yum</strong></a>: Este módulo tem um novo parâmetro <code>security</code> para limitar a atualização somente dos pacotes de segurança:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+    security: yes
+</code></pre>
+
+<ul>
+<li>Módulo de comando <a href="http://docs.ansible.com/ansible/latest/telnet_module.html"><strong>telnet</strong></a>: Finalmente o módulo de rede que faltava no Ansible. É muito comum os dispositivos de rede não terem o ssh habilitado. Com esse módulo é possível habilitá-los através do telnet ou executar diversos outros comandos:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>  - name: send configuration commands to IOS
+    telnet:
+      user: cisco
+      password: cisco
+      login_prompt: &quot;Username: &quot;
+      prompts:
+        - &quot;[&gt;|#]&quot;
+      commands:
+        - terminal length 0
+        - configure terminal
+        - hostname ios01
+</code></pre>
+
+<ul>
+<li>Módulo de arquivos <a href="http://docs.ansible.com/ansible/latest/xml_module.html"><strong>xml</strong></a>: Faltava esse módulo nativamente no Ansible para tratamento de arquivos XMLs:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: Remove all children from the website element (option 1)
+  xml:
+    path: /foo/bar.xml
+    xpath: /business/website/*
+    state: absent
+</code></pre>
+
+<ul>
+<li>Módulo de sistema <a href="http://docs.ansible.com/ansible/latest/interfaces_file_module.html"><strong>interfaces_file</strong></a>: Gerencie as interfaces de rede de servidores Linux diretamente nos arquivos de configuração. Adicione, remova ou gerencie opções individuais&rdquo;</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code># Set eth1 mtu configuration value to 8000
+- interfaces_file:
+    dest: /etc/network/interfaces.d/eth1.cfg
+    iface: eth1
+    option: mtu
+    value: 8000
+    backup: yes
+    state: present
+  register: eth1_cfg
+</code></pre>
+
+<ul>
+<li>Módulo Windows <a href="http://docs.ansible.com/ansible/latest/win_domain_group_module.html"><strong>win_domain_group</strong></a>: Gerencie grupos do MS Active Diretory:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: ensure the group Cow does't exist using the Distinguished Name
+  win_domain_group:
+    name: CN=Cow,OU=groups,DC=ansible,DC=local
+    state: absent
+</code></pre>
+
+<ul>
+<li>Módulo Windows <a href="http://docs.ansible.com/ansible/latest/win_domain_user_module.html"><strong>win_domain_user</strong></a>: Gerencie usuários do MS Active Diretory:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: Ensure user bob is present with address information
+  win_domain_user:
+    name: bob
+    firstname: Bob
+    surname: Smith
+    company: BobCo
+    password: B0bP4ssw0rd
+    state: present
+    groups:
+      - Domain Users
+    street: 123 4th St.
+    city: Sometown
+    state_province: IN
+    postal_code: 12345
+    country: US
+</code></pre>
+
+<ul>
+<li>Módulo Windows <a href="http://docs.ansible.com/ansible/latest/win_dsc_module.html"><strong>win_dsc</strong></a>: Os scripts de Configuração do PowerShell Desired State Configuration (DSC — um Ansible by Microsoft?) podem ser chamados através deste módulo. Com isso é possível extender suporte do Ansible em ambientes Windows, aproveitando essa arquitetura disponível no Powershell 4 e 5:</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code># Playbook example
+  - name: Extract zip file
+    win_dsc:
+      resource_name: archive
+      ensure: Present
+      path: &quot;C:\\Temp\\zipfile.zip&quot;
+      destination: &quot;C:\\Temp\\Temp2&quot;
+
+  - name: Invoke DSC with check mode
+    win_dsc:
+      resource_name: windowsfeature
+      name: telnet-client
+</code></pre>
+
+<ul>
+<li>Módulo Windows <a href="http://docs.ansible.com/ansible/latest/win_hotfix_module.html"><strong>win_hotfix</strong></a>: Especifica qual hotfix você quer instalar.</li>
+</ul>
+
+<p><b></b></p>
+
+<pre><code>- name: install hotfix without validating the KB and Identifier
+  win_hotfix:
+    source: C:\temp\windows8.1-kb3172729-x64_e8003822a7ef4705cbb65623b72fd3cec73fe222.msu
+    state: present
+  register: hotfix_install
+
+- win_reboot:
+  when: hotfix_install.reboot_required
+</code></pre>
+
+<h3 id="ansible-vault">Ansible Vault:</h3>
+
+<p>O <a href="http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords"><strong>Ansible Vault</strong></a> agora permite senhas diferentes para os arquivos criptografados:</p>
+
+<pre><code>  $ ansible-playbook --vault-id dev-password --vault-id @prompt site.yml
+</code></pre>
+
+<h3 id="automação-de-rede-networking">Automação de Rede (Networking):</h3>
+
+<p>O Ansible 2.4 também incluiu novos updates especificamente para automação de rede, incluindo &lsquo;Declaração de Intenção&rsquo; (declarative intent). <a href="https://www.ansible.com/blog/networking-features-in-ansible-2-4"><strong>Veja mais sobre</strong></a>.</p>
+
+<p>O número de plataformas de redes suportadas cresceu para 33 e o total de módulos só de rede agora é 463 (36% dos módulos Ansible).</p>
+
+<h3 id="migrando-versões-anteriores">Migrando versões anteriores:</h3>
+
+<p>Segue o link com os cuidados que devem ser tomados na atualização do ambiente (em Inglês):</p>
+
+<ul>
+<li><a href="http://docs.ansible.com/ansible/2.4/porting_guide_2.4.html"><strong>Guia de Migração para 2.4</strong></a></li>
+</ul>
+
+<h3 id="referências">Referências:</h3>
+
+<ul>
+<li><p><a href="https://www.redhat.com/en/blog/ansible-project-24-now-generally-available"><strong>Ansible Project 2.4 now generally available</strong></a></p></li>
+
+<li><p><a href="https://github.com/ansible/ansible/blob/stable-2.4/CHANGELOG.md"><strong>Changelog completo</strong></a></p></li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/aprenda-mais/changelogs/ansible-2.4-import-include/" title="Ansible 2.4 — Include x Import"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/search/" title="Sobre a busca" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/learn.js"></script>
+<script src="/js/hugo-learn.js"></script>
+
+
+<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/</link>
+    <description>Recent content on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
+    
+	<atom:link href="https://ansible-br.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansible 2.4 — Include x Import</title>
+      <link>https://ansible-br.github.io/aprenda-mais/changelogs/ansible-2.4-import-include/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/aprenda-mais/changelogs/ansible-2.4-import-include/</guid>
+      <description>Novo conceito A nova versão 2.4 do Ansible foi disponibilizada (19/09/2017) na qual foi introduzido o conceito de include e import. Agora é possível dizer se você quer a importação estática ou inclusão dinâmica de tasks e roles.
+Primeiramente: o módulo include foi descontinuado (continuará disponível até a versão 2.8 do Ansible) e deu lugar para novos módulos: import_* (import_tasks, import_role, import_plays) e include_* (include_tasks, include_role).
+Mas qual a diferença entre import e include?</description>
+    </item>
+    
+    <item>
+      <title>Ansible 2.4 — Novas funcionalidades e Módulos</title>
+      <link>https://ansible-br.github.io/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/</guid>
+      <description>O que há de novo? A seguir uma série de funcionalidades e novos módulos que vieram nesta nova versão 2.4:
+Modernização: O Ansible agora suporta plenamente o Python 3 bem como o inventário no formato baseado em YAML.
+Playbooks: Diretiva order: Agora é possível modificar a ordem que o Ansible processa os hosts quando dispara as tasks.
+- hosts: all order: sorted gather_facts: False tasks: - debug: var=inventory_hostname  Possíveis valores para a diretiva order:</description>
+    </item>
+    
+    <item>
+      <title>Curva de Aprendizado</title>
+      <link>https://ansible-br.github.io/por-que-ansible/curva-aprendizado/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/curva-aprendizado/</guid>
+      <description>Fácil aprendizado O Ansible tem um aprendizado muito rápido, sendo fácil a instalação e configuração inicial. Em menos de 30 minutos é possível instalar, configurar e executar comandos Ad-Hoc para ’n’ servidores para resolver um problema específico: Ajustes de horário de verão, sincronização de hora, troca de senha de root, atualizar servidores, restartar serviços, etc.
+A sintaxe e o fluxo de trabalho são de simples de compreensão, facilitando o aprendizado de novos usuários.</description>
+    </item>
+    
+    <item>
+      <title>Gerência de Configuração</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/gerencia-configuracao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/gerencia-configuracao/</guid>
+      <description> GCONF Código, ciclo de vida e mudanças podem ser feitas através do inventário, playbooks e roles no Ansible. É possível gerenciar estados desejados e idempotência nativamente nas tarefas que serão executadas. Tudo de forma muito simples e robusta.
+O Ansible torna a automação mais acessível. Veja mais (inglês) </description>
+    </item>
+    
+    <item>
+      <title>Infra Mutável</title>
+      <link>https://ansible-br.github.io/por-que-ansible/infra-mutavel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/infra-mutavel/</guid>
+      <description>Mudanças sem traumas: Sabemos que o modelo antigo de infraestrutura leva um tempo para convergir para ambiente totalmente automatizado (Infra as Code). Os ambientes administrados por Sysadmins são constantemente modificados (Infra mutável) e qualquer mudança é onerosa, gera desgastes e muitas intervenções manuais.
+O Ansible se adapta bem para ambientes mistos, convivendo sem problemas com ambientes parcialmente ou majoritariamente automatizados. A transição de um modelo para outro será menos traumática com Ansible.</description>
+    </item>
+    
+    <item>
+      <title>Livros</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/livros/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/livros/</guid>
+      <description>Segue abaixo alguns livros de referência no aprendizado do Ansible.
+   Título Autor Editora Idioma     Ansible: From Beginner to Pro Michal Heap Apress Inglês   Ansible for DevOps Jeff Geerling Leanpub Inglês   Ansible: Up and Running Lorin Hochstein O’Reilly Inglês   Mastering Ansible Jesse Keating Packtpub Inglês    </description>
+    </item>
+    
+    <item>
+      <title>Orquestração</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/orquestracao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/orquestracao/</guid>
+      <description> Maestro da Infra: Motor simplificado e poderoso de orquestração. O Ansible se integra com quase todas as áreas da infraestrutura, desde o provisionamento de VMs até liberação de regras no firewall. Também foca nas áreas onde outras ferramentas deixam lacunas tais como parada zero (Rolling updates), integrações contínuas (Continuous Integration) para aplicações multi-camadas em toda a infraestrutura.
+Orquestração complexa? Solução simples. Veja mais (inglês)  </description>
+    </item>
+    
+    <item>
+      <title>Provisionamento</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/provisionamento/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/provisionamento/</guid>
+      <description> PaaS, SaaS, IaaS: O Ansible possui módulos para containers (Docker), Virtualização (VMware, AWS, OpenStack, Azure, Ovirt) e podem facilmente se integrar com outras tarefas das etapas anteriores.
+Pronto para diversas Clouds&amp;hellip; Tudo na mesma linguagem de Playbooks Veja mais (inglês)  </description>
+    </item>
+    
+    <item>
+      <title>Sem agentes</title>
+      <link>https://ansible-br.github.io/por-que-ansible/sem-agentes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/sem-agentes/</guid>
+      <description>Somente um “Ansible Control”: Evite o problema de &amp;ldquo;gerenciar o gerencimento&amp;rdquo;, comum em vários sistemas de automação.
+Ansible não necessita de agentes instalados nas pontas. A única necessidade é um servidor com Ansible instalado (Ansible Control) com acesso aos servidores a serem administrados (hosts) através dos protocolos SSH (para ambientes Linux) ou WINRM (Acesso remoto Windows) . As Playbooks empurram (push) as configurações desejadas nos hosts definidos no inventário e podem inclusive ser executadas Ad-Hoc (via linha de comando sem a necessidade de definições em arquivos).</description>
+    </item>
+    
+    <item>
+      <title>Cursos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/cursos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/cursos/</guid>
+      <description>Segue uma relação de cursos disponíveis para o aprendizado do Ansible.
+   Título Autor Plataforma Idioma Nível Gratuito     Curso Ansible Jackson Lima School of Net Português Iniciante Não   Ansible Essentials: Simplicity in Automation Red Hat Inc. - Michelle Perz Udemy Inglês (com legendas) Iniciante Sim   Ansible for the Absolute Beginner - Hands-On Mumshad Mannambeth Udemy Inglês Iniciante Não   Mastering Ansible Chris Lunsford Udemy Inglês (com legendas) Qualquer Não   Ansible Advanced Mumshad Mannambeth Udemy Inglês Intermediário Não   Automation with Ansible I (DO407)  Oficial RedHat Online/Presencial Português Intermediário Não   Automation with Ansible II: Ansible Tower II (DO409) Oficial RedHat Online/Presencial Português Intermediário Não   Red Hat Certificate of Expertise in Ansible Automation (EX407) Oficial RedHat Presencial Português Avançado Não   Getting Started With Ansible: Key Concepts for Beginners Linux Academy Udemy Inglês Iniciante Sim   Hands-on Ansible Aaron Paxson Pluralsight Inglês Iniciante Não    </description>
+    </item>
+    
+    <item>
+      <title>Passo 1 - Repositório</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-1/</guid>
+      <description> Adicionando o repositório do EPEL Para o Fedora 24+ ou RHEL/CentOS 7 não será necessário executar este passo. O Ansible já está disponível no repositório padrão.
+ Para os ambientes de RHEL/CentOS 6, é necessário adicionar/instalar o repositório do EPEL (Extra Packages for Enterprise Linux).
+$ sudo yum install epel-release -y  </description>
+    </item>
+    
+    <item>
+      <title>Windows - Conceitos Básicos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-1/</guid>
+      <description>Windows &amp;amp; Ansible - Conceitos básicos Há algumas diferenças na utilização de Ansible para gerenciar servidores Windows quando comparados com os servidores Linux.
+Forma de Conexão A primeira diferença é na forma de conexão entre o Ansible Control e o host. É utilizado o Windows Remote Management (WinRM), que é a implementação da Microsoft do Web Services Management (WS-Man), um padrão aberto do Distributed Management Task Force (DMTF), em que se utiliza um web service baseado em SOAP para gerência remota de diversos dispositivos.</description>
+    </item>
+    
+    <item>
+      <title>Windows - Pré-requisitos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-2/</guid>
+      <description>Configurando um Host Windows A configuração de um host Windows para ser gerenciado com Ansible se concentra em três componentes:
+ .Net Framework Windows Management Framework Configuração WinRM  Versões suportadas do Windows O Ansible suporta todas as versões atuais e com suporte estendido do Windows.
+ Desktop: 7, 8.1 e 10 Server: 2008, 2008 R2, 2012, 2012 R2 e 2016  .Net Framework É necessário que a versão 4 do .</description>
+    </item>
+    
+    <item>
+      <title>Passo 2 - Instalação</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-2/</guid>
+      <description> Instalando o Ansible Control A instalação do Ansible em ambiente RHEL/CentOS 6+ é realizada da mesma forma que no Fedora 24+ , mudando só o utilitário gerenciador de pacotes de DNF para YUM:
+RHEL/Centos 6+ $ sudo yum install ansible libselinux-python -y  Fedora 24+ $ sudo dnf install ansible libselinux-python -y  Para outras opções de instalação do Ansible, siga essas instruções (inglês) </description>
+    </item>
+    
+    <item>
+      <title>Webinars</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/webinars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/webinars/</guid>
+      <description>Segue uma relação de cursos disponíveis para o aprendizado do Ansible.
+   Webinar Autores Idioma     AUTOMATING YOUR NETWORK Justin Nemmers, Peter Sprygada Inglês   ANSIBLE PLAYBOOKS USING NETWORK MODULES Peter Sprygada Inglês   EXECUTING CONFIGURATION CHANGES ON NETWORK DEVICES Peter Sprygada Inglês   ANSIBLE TIPS &amp;amp; TRICKS Brian Coca Inglês   WRITING MODULES FOR ANSIBLE James Cammarata Inglês   GETTING STARTED: MOVING FROM ANSIBLE CLI TO TOWER David Federlein Inglês   ANSIBLE TOWER BASICS: WORKFLOWS David Federlein Inglês   ASK AN EXPERT - WINDOWS Mark Phillips, Matt Davis Inlgês   ASK AN EXPERT - CONTAINER Chris Houseknecht, Greg DeKoenigsberg, Justin Nemmers, Joshua Ginsberg Inglês   LDAP AUTHENTICATION IN RED HAT ANSIBLE TOWER David Federlein, John Lieske Inglês   OUTROS Diversos Inglês    </description>
+    </item>
+    
+    <item>
+      <title>Passo 3 - Ad-Hoc</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-3/</guid>
+      <description>Primeiros comandos Ad-Hoc: Após a conclusão da instalação, o Ansible já estará pronto para iniciar os primeiros comandos de automação.
+Verificando a versão do Ansible $ ansible --version ansible 2.3.2.0 config file = /etc/ansible/ansible.cfg configured module search path = Default w/o overrides python version = 2.7.13 (default, May 10 2017, 20:04:36) [GCC 6.3.1 20161221 (Red Hat 6.3.1-1)]  MÓDULO PING: Verificar conectividade entre o Ansible Control e o Host $ ansible localhost -m ping [WARNING]: Host file not found: /etc/ansible/hosts [WARNING]: provided hosts list is empty, only localhost is available localhost | SUCCESS =&amp;gt; { &amp;quot;changed&amp;quot;: false, &amp;quot;ping&amp;quot;: &amp;quot;pong&amp;quot; }  Quando nenhum arquivo de inventário é definido (Por padrão /etc/ansible/host ou o parâmetro -i &amp;lt;path/nomeinventario&amp;gt;), somente o Host &amp;lsquo;localhost&amp;rsquo; fica disponível para os comandos Ansible.</description>
+    </item>
+    
+    <item>
+      <title>Sites de Referência</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/sites-referencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/sites-referencia/</guid>
+      <description>Segue uma relação de sites de referências disponíveis para o aprendizado do Ansible.
+   Site Autor Idioma     Documentação Oficial Ansible.com Inglês   Pesquisa Rápida da Documentação do Ansible DevDocs Inglês   DGMorales Diego Morales Português/Inglês   Code Your Infra Gustavo Inglês   Cisco Rede - Automation Networking Rodrigo Rovere Português   ChurrOps on DevOps Rodrigo Floriano Português   Tiago Costa Tiago Costa Português   Just Digital Renato Biancalana Português   Giovanni dos Reis Nunes Giovanni dos Reis Nunes Português    </description>
+    </item>
+    
+    <item>
+      <title>Passo 4 - Módulos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-4/</guid>
+      <description>Verificando os módulos disponíveis O Ansible vem com um utilitário chamado ansible-doc. Nele é possível consultar todos os módulos disponíveis numa instalação padrão do Ansible:
+$ ansible-doc -l [...] expect Executes a command and responds to prompts facter Runs the discovery program `facter&#39; on the remote system fail Fail with custom message fetch Fetches a file from remote nodes file Sets attributes of files filesystem Makes file system on block device find return a list of files based on specific criteria firewalld Manage arbitrary ports/services with firewalld flowadm Manage bandwidth resource control and priority for protocols, se.</description>
+    </item>
+    
+    <item>
+      <title>Passo 5 - Inventário</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-5/</guid>
+      <description>Primeiro arquivo de Inventário O Ansible foi projetado para trabalhar com múltiplos sistemas (servidores baremetal, máquinas virtuais, Dispositivos de rede etc.) ao mesmo tempo. Ele trabalha selecionando partes desses sistemas listados num arquivo de inventário, que por padrão fica salvo em /etc/ansible/hosts. É possível também especificar um arquivo diferente usando o parâmetro -i &amp;lt;path/nomeinventario&amp;gt; na linha de comando (Ad-Hoc $ ansible ou Playbook $ ansible-playbook).
+O arquivo padrão de inventário já vem com vários exemplos, conforme se vê abaixo:</description>
+    </item>
+    
+    <item>
+      <title>Passo 6 - Playbook</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-6/</guid>
+      <description>Primeira Playbook Os comandos Ad-Hoc executam apenas um módulo por vez. Mas e se a gente quiser criar uma sequência de tarefas com os módulos disponíveis? Aí que entram as playbooks.
+Utilizando um arquivo no formato YAML (veja sintaxe YAML), todas as tarefas podem ser definidas em sequência e chamadas através de um único comando ansible-playbook -i &amp;lt;nome_inventario&amp;gt; &amp;lt;nome_playbook&amp;gt;.
+Uma playbook basicamente é composta por &amp;lsquo;play&amp;rsquo; e &amp;lsquo;tasks&amp;rsquo;. Uma &amp;lsquo;play&amp;rsquo; é análoga a uma jogada ensaiada de basquete.</description>
+    </item>
+    
+    <item>
+      <title>Passo 7 - Dicas e truques</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/passo-7/</guid>
+      <description>1) Criar relação de confiança Hosts Linux Para se conectar aos Hosts Linux, o meio mais prático é criar relação de confiança entre o Ansible Control e os Hosts alvo:
+Gerar uma chave de conexão $ ssh-key-gen    Expandir saída   Generating public/private rsa key pair. Enter file in which to save the key (/home/usuario/.ssh/id_rsa): Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/usuario/.</description>
+    </item>
+    
+    <item>
+      <title>Recapitulando</title>
+      <link>https://ansible-br.github.io/primeiros-passos/guia-rapido/recap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/guia-rapido/recap/</guid>
+      <description>Recapitulando Criando uma analogia, os módulos/tasks são as ferramentas, as playbooks são o manuais de instruções e o inventário é a matéria prima para construirmos um produto/serviço através da automação.
+Como vimos, a automação com Ansible é simples desde a sua instalação até a execução Ad-Hoc de tasks nos Hosts (naturalmente via ssh - Linux). Os comandos Ad-Hoc nos lembram comandos que são realizados em bash/shell no Linux, onde podemos facilmente evoluir para a execução automatizada com Playbooks.</description>
+    </item>
+    
+    <item>
+      <title>Quem usa?</title>
+      <link>https://ansible-br.github.io/por-que-ansible/quem-usa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/quem-usa/</guid>
+      <description>Caixa Econômica Federal: O provisionamento dos mais de 50.000 caixas eletrônicos é feito com Ansible
+A 4Linux projetou essa e outras automações para a Caixa. Hoje a empresa ministra cursos de DevOps com Ansible no conteúdo programático Mais informações PJe 2.0 TJDFT: O principal sistema (Processo Judicial Eletrônico) do Tribunal de Justiça do Distrito Federal e Territórios - TJDFT foi provisionado, configurado e mantido com Ansible. Hoje o PJe 2.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://ansible-br.github.io/por-que-ansible/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/faq/</guid>
+      <description>Ansible é considerado ou não como gerência de configuração? Existem diversas discussões na internet sobre se o Ansible é considerado uma ferramenta de Gerência de Configuração. A parte teórica da gerência de configuração se baseia na escola de GCONF apresentado por Mark Burgess, criador do CFEngine, onde o mesmo diz que os princípios do GCONF são Idempotência e estado desejado.
+Idempotência é a característica de verificar o estado atual do que será modificado.</description>
+    </item>
+    
+    <item>
+      <title>header</title>
+      <link>https://ansible-br.github.io/_header/</link>
+      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
+      
+      <guid>https://ansible-br.github.io/_header/</guid>
+      <description>Documentação Ansible-br</description>
+    </item>
+    
+    <item>
+      <title>Créditos</title>
+      <link>https://ansible-br.github.io/creditos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/creditos/</guid>
+      <description> Contribuidores no Github .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @darioems 50 commits   @somatorio 7 commits   @rafaasmiranda 2 commits   @diegolakatos 1 commits   </description>
+    </item>
+    
+  </channel>
+</rss>

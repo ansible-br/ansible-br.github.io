@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.46" />
+    <meta name="description" content="Primeiros Comandos Ad-Hoc">
+
+
+    <title>Passo 3 - Ad-Hoc :: Documentação Ansible-br</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/horsey.css" rel="stylesheet">
+    
+    <link href="/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/primeiros-passos/guia-rapido/passo-3/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	<p>Documentação Ansible-br</p>
+
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Pesquisar...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/horsey.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/ansible-br.github.io\/";
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+    
+  </div>
+
+  
+    <ul class="topics">
+        
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/por-que-ansible/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/por-que-ansible/">
+        <span><i class='fa fa-question-circle'></i>Por que Ansible?</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/por-que-ansible/all-in-one/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/por-que-ansible/all-in-one/">
+        <span>All-in-one: Tudo em um</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/gerencia-configuracao/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/gerencia-configuracao/">
+        <span>Gerência de Configuração</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/orquestracao/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/orquestracao/">
+        <span>Orquestração</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/all-in-one/provisionamento/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/all-in-one/provisionamento/">
+        <span>Provisionamento</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/curva-aprendizado/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/curva-aprendizado/">
+        <span>Curva de Aprendizado</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/infra-mutavel/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/infra-mutavel/">
+        <span>Infra Mutável</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/sem-agentes/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/sem-agentes/">
+        <span>Sem agentes</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/quem-usa/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/quem-usa/">
+        <span>Quem usa?</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/por-que-ansible/faq/" class="dd-item
+     
+      ">
+        <a href="/por-que-ansible/faq/">
+        <span>FAQ</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/primeiros-passos/">
+        <span><i class='fa fa-chevron-circle-right'></i>Primeiros Passos</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/guia-rapido/" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/primeiros-passos/guia-rapido/">
+        <span>Guia Rápido</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-1/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-1/">
+        <span>Passo 1 - Repositório</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-2/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-2/">
+        <span>Passo 2 - Instalação</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-3/" class="dd-item
+     active
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-3/">
+        <span>Passo 3 - Ad-Hoc</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-4/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-4/">
+        <span>Passo 4 - Módulos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-5/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-5/">
+        <span>Passo 5 - Inventário</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-6/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-6/">
+        <span>Passo 6 - Playbook</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/passo-7/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/passo-7/">
+        <span>Passo 7 - Dicas e truques</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/guia-rapido/recap/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/guia-rapido/recap/">
+        <span>Recapitulando</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/materiais-de-estudo/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/materiais-de-estudo/">
+        <span>Materiais de Estudo</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/livros/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/livros/">
+        <span>Livros</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/cursos/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/cursos/">
+        <span>Cursos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/webinars/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/webinars/">
+        <span>Webinars</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/materiais-de-estudo/sites-referencia/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/materiais-de-estudo/sites-referencia/">
+        <span>Sites de Referência</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/primeiros-passos/windows-e-ansible/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/primeiros-passos/windows-e-ansible/">
+        <span>Windows e Ansible</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/windows-e-ansible/windows-1/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/windows-e-ansible/windows-1/">
+        <span>Windows - Conceitos Básicos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/primeiros-passos/windows-e-ansible/windows-2/" class="dd-item
+     
+      ">
+        <a href="/primeiros-passos/windows-e-ansible/windows-2/">
+        <span>Windows - Pré-requisitos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/aprenda-mais/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aprenda-mais/">
+        <span><i class='fa fa-mortar-board'></i>Aprenda mais</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/aprenda-mais/changelogs/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aprenda-mais/changelogs/">
+        <span>Changelogs</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-right fa-lg category-icon"></i>
+          
+
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/aprenda-mais/changelogs/ansible-2.4-import-include/" class="dd-item
+     
+      ">
+        <a href="/aprenda-mais/changelogs/ansible-2.4-import-include/">
+        <span>Ansible 2.4 — Include x Import</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/" class="dd-item
+     
+      ">
+        <a href="/aprenda-mais/changelogs/ansible-2.4-novas-funcionalidades-e-modulos/">
+        <span>Ansible 2.4 — Novas funcionalidades e Módulos</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/search/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/search/">
+        <span>Sobre a busca</span>
+
+        
+        
+
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+              
+    </li>
+  
+ 
+
+          
+        
+
+        
+        <section id="shortcuts">
+            
+                <li class="" role="">
+                    <h3>Mais</h3>
+                    <a href="https://t.me/ansiblebr/"><i class='fa fa-telegram'></i> Grupo Telegram</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://infraascode.slack.com"><i class='fa fa-slack'></i> Slack Infra-as-Code</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="http://docs.ansible.com/ansible/latest/index.html"><i class='fa fa-bookmark'></i> Documentação Oficial Ansible</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://github.com/ansible-br/site-hugo/"><i class='fa fa-github'></i> Repositório Github</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="/creditos"><i class='fa fa-bullhorn'></i> Créditos</a>
+                    
+                </li>
+            
+        </section>    
+        
+        
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Limpar Histórico</a>
+        
+
+        
+    </ul>
+    
+     
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/ansible-br/site-hugo/edit/master/content/primeiros-passos/guia-rapido/passo-3.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Editar página
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/'>Documentação Ansible-br</a> > <a href='/primeiros-passos/'>Primeiros Passos</a> > <a href='/primeiros-passos/guia-rapido/'>Guia Rápido</a> > Passo 3 - Ad-Hoc
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#primeiros-comandos-ad-hoc">Primeiros comandos Ad-Hoc:</a>
+<ul>
+<li>
+<ul>
+<li><a href="#verificando-a-versão-do-ansible">Verificando a versão do Ansible</a></li>
+<li><a href="#módulo-ping-http-docs-ansible-com-ansible-latest-ping-module-html-verificar-conectividade-entre-o-ansible-control-e-o-host"><a href="http://docs.ansible.com/ansible/latest/ping_module.html">MÓDULO PING</a>: Verificar conectividade entre o Ansible Control e o Host</a></li>
+<li><a href="#módulo-setup-http-docs-ansible-com-ansible-latest-setup-module-html-coletando-informações-do-host-gathers-facts"><a href="http://docs.ansible.com/ansible/latest/setup_module.html">MÓDULO SETUP</a>: Coletando informações do host (Gathers facts)</a></li>
+<li><a href="#módulo-service-http-docs-ansible-com-ansible-latest-service-module-html-reiniciando-um-serviço"><a href="http://docs.ansible.com/ansible/latest/service_module.html">MÓDULO SERVICE</a>: Reiniciando um serviço</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Passo 3 - Ad-Hoc</h1>
+          
+
+
+
+
+
+
+<h2 id="primeiros-comandos-ad-hoc">Primeiros comandos Ad-Hoc:</h2>
+
+<p>Após a conclusão da instalação, o Ansible já estará pronto para iniciar os primeiros comandos de automação.</p>
+
+<h4 id="verificando-a-versão-do-ansible">Verificando a versão do Ansible</h4>
+
+<pre><code class="language-bash">$ ansible --version
+
+ansible 2.3.2.0
+	config file = /etc/ansible/ansible.cfg
+	configured module search path = Default w/o overrides
+	python version = 2.7.13 (default, May 10 2017, 20:04:36)
+	[GCC 6.3.1 20161221 (Red Hat 6.3.1-1)]
+</code></pre>
+
+<h4 id="módulo-ping-http-docs-ansible-com-ansible-latest-ping-module-html-verificar-conectividade-entre-o-ansible-control-e-o-host"><a href="http://docs.ansible.com/ansible/latest/ping_module.html">MÓDULO PING</a>: Verificar conectividade entre o Ansible Control e o Host</h4>
+
+<pre><code class="language-bash">$ ansible localhost -m ping
+
+[WARNING]: Host file not found: /etc/ansible/hosts
+[WARNING]: provided hosts list is empty, only localhost is available
+localhost | SUCCESS =&gt; {
+	&quot;changed&quot;: false,
+	&quot;ping&quot;: &quot;pong&quot;
+}
+</code></pre>
+
+<div class="notices tip" ><p>Quando nenhum arquivo de inventário é definido (Por padrão /etc/ansible/host ou o parâmetro -i &lt;<em>path/nomeinventario</em>&gt;), somente o <em>Host</em> &lsquo;localhost&rsquo; fica disponível para os comandos Ansible. Para <em>Hosts</em> remotos será necessário definí-los num arquivo de inventário.</p>
+</div>
+
+
+<div class="notices info" ><p>O módulo &lsquo;ping&rsquo; foi informado através do parâmetro <code>-m</code> e, no caso de sucesso, retorna &lsquo;pong&rsquo;. A exibição dos resultados dos comandos Ansible é feita no formato json, mas <a href="https://www.jeffgeerling.com/blog/2018/use-ansibles-yaml-callback-plugin-better-cli-experience">pode ser alterada para yaml a partir da versão 2.5</a>.</p>
+</div>
+
+
+<div class="notices info" ><p>O comando ping não não envia pacotes ICMP para o <em>Host</em>. Este módulo realiza um teste de verificação de permissão, da instalação do python <strong>Host</strong> e que este está acessível pelo Ansible Control.</p>
+</div>
+
+
+<h4 id="módulo-setup-http-docs-ansible-com-ansible-latest-setup-module-html-coletando-informações-do-host-gathers-facts"><a href="http://docs.ansible.com/ansible/latest/setup_module.html">MÓDULO SETUP</a>: Coletando informações do host (Gathers facts)</h4>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Clique aqui para expandir:
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code class="language-bash">$ ansible localhost -m setup
+
+localhost | SUCCESS =&gt; {
+		&quot;ansible_facts&quot;: {
+				&quot;ansible_all_ipv4_addresses&quot;: [
+						&quot;192.168.0.4&quot;,
+						&quot;192.168.33.1&quot;
+				],
+				&quot;ansible_all_ipv6_addresses&quot;: [
+						&quot;fe80::cf0:a4b6:79f1:9155%en1&quot;,
+						&quot;2804:14c:65d6:5af0:1cba:e7e2:6423:1848&quot;,
+						&quot;2804:14c:65d6:5af0:e8e7:20ff:caeb:ea6d&quot;,
+						&quot;fe80::b5ba:39ce:b960:939d%utun0&quot;
+				],
+				&quot;ansible_apparmor&quot;: {
+						&quot;status&quot;: &quot;disabled&quot;
+				},
+				&quot;ansible_architecture&quot;: &quot;x86_64&quot;,
+				&quot;ansible_bridge0&quot;: {
+						&quot;device&quot;: &quot;bridge0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;d2:00:18:4a:a4:00&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;Unknown&quot;,
+						&quot;media_type&quot;: &quot;unknown type&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;status&quot;: &quot;inactive&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_date_time&quot;: {
+						&quot;date&quot;: &quot;2017-09-16&quot;,
+						&quot;day&quot;: &quot;16&quot;,
+						&quot;epoch&quot;: &quot;1505599934&quot;,
+						&quot;hour&quot;: &quot;19&quot;,
+						&quot;iso8601&quot;: &quot;2017-09-16T22:12:14Z&quot;,
+						&quot;iso8601_basic&quot;: &quot;20170916T191214896080&quot;,
+						&quot;iso8601_basic_short&quot;: &quot;20170916T191214&quot;,
+						&quot;iso8601_micro&quot;: &quot;2017-09-16T22:12:14.896212Z&quot;,
+						&quot;minute&quot;: &quot;12&quot;,
+						&quot;month&quot;: &quot;09&quot;,
+						&quot;second&quot;: &quot;14&quot;,
+						&quot;time&quot;: &quot;19:12:14&quot;,
+						&quot;tz&quot;: &quot;-03&quot;,
+						&quot;tz_offset&quot;: &quot;-0300&quot;,
+						&quot;weekday&quot;: &quot;Saturday&quot;,
+						&quot;weekday_number&quot;: &quot;6&quot;,
+						&quot;weeknumber&quot;: &quot;37&quot;,
+						&quot;year&quot;: &quot;2017&quot;
+				},
+				&quot;ansible_default_ipv4&quot;: {
+						&quot;address&quot;: &quot;192.168.0.4&quot;,
+						&quot;broadcast&quot;: &quot;192.168.0.255&quot;,
+						&quot;device&quot;: &quot;en1&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;gateway&quot;: &quot;192.168.0.1&quot;,
+						&quot;interface&quot;: &quot;en1&quot;,
+						&quot;macaddress&quot;: &quot;b8:8d:12:3e:a5:66&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+						&quot;network&quot;: &quot;192.168.0.0&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;status&quot;: &quot;active&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_default_ipv6&quot;: {
+						&quot;address&quot;: &quot;fe80::cf0:a4b6:79f1:9155%en1&quot;,
+						&quot;device&quot;: &quot;en1&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;gateway&quot;: &quot;fe80::5ee3:eff:fe00:e66f%en1&quot;,
+						&quot;interface&quot;: &quot;en1&quot;,
+						&quot;macaddress&quot;: &quot;b8:8d:12:3e:a5:66&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;prefix&quot;: &quot;64&quot;,
+						&quot;status&quot;: &quot;active&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_distribution&quot;: &quot;MacOSX&quot;,
+				&quot;ansible_distribution_release&quot;: &quot;16.7.0&quot;,
+				&quot;ansible_distribution_version&quot;: &quot;10.12.6&quot;,
+				&quot;ansible_dns&quot;: {
+						&quot;nameservers&quot;: [
+								&quot;2804:14c:6510:672:189:6::171&quot;,
+								&quot;2804:14c:6510:672:189:6::179&quot;,
+								&quot;189.6.0.179&quot;,
+								&quot;189.6.0.171&quot;
+						]
+				},
+				&quot;ansible_domain&quot;: &quot;local&quot;,
+				&quot;ansible_effective_group_id&quot;: 20,
+				&quot;ansible_effective_user_id&quot;: 502,
+				&quot;ansible_en0&quot;: {
+						&quot;device&quot;: &quot;en0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;3c:07:54:39:aa:df&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;media_type&quot;: &quot;none&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;status&quot;: &quot;inactive&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_en1&quot;: {
+						&quot;device&quot;: &quot;en1&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [
+								{
+										&quot;address&quot;: &quot;192.168.0.4&quot;,
+										&quot;broadcast&quot;: &quot;192.168.0.255&quot;,
+										&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+										&quot;network&quot;: &quot;192.168.0.0&quot;
+								}
+						],
+						&quot;ipv6&quot;: [
+								{
+										&quot;address&quot;: &quot;fe80::cf0:a4b6:79f1:9155%en1&quot;,
+										&quot;prefix&quot;: &quot;64&quot;
+								},
+								{
+										&quot;address&quot;: &quot;2804:14c:65d6:5af0:1cba:e7e2:6423:1848&quot;,
+										&quot;prefix&quot;: &quot;64&quot;
+								},
+								{
+										&quot;address&quot;: &quot;2804:14c:65d6:5af0:e8e7:20ff:caeb:ea6d&quot;,
+										&quot;prefix&quot;: &quot;64&quot;
+								}
+						],
+						&quot;macaddress&quot;: &quot;b8:8d:12:3e:a5:66&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;status&quot;: &quot;active&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_en2&quot;: {
+						&quot;device&quot;: &quot;en2&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;PROMISC&quot;,
+								&quot;SIMPLEX&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;d2:00:18:4a:a4:00&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;media_type&quot;: &quot;full-duplex&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;options&quot;: [
+								&quot;TSO4&quot;,
+								&quot;TSO6&quot;
+						],
+						&quot;status&quot;: &quot;inactive&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_env&quot;: {
+						&quot;Apple_PubSub_Socket_Render&quot;: &quot;/private/tmp/com.apple.launchd.CDkJTznnrB/Render&quot;,
+						&quot;CLICOLOR&quot;: &quot;1&quot;,
+						&quot;COLORFGBG&quot;: &quot;15;0&quot;,
+						&quot;COLORTERM&quot;: &quot;truecolor&quot;,
+						&quot;COMMAND_MODE&quot;: &quot;unix2003&quot;,
+						&quot;DISPLAY&quot;: &quot;/private/tmp/com.apple.launchd.4YEzXglgiX/org.macosforge.xquartz:0&quot;,
+						&quot;GREP_OPTIONS&quot;: &quot;--color=auto&quot;,
+						&quot;HOME&quot;: &quot;/Users/userlinux&quot;,
+						&quot;ITERM_PROFILE&quot;: &quot;Default&quot;,
+						&quot;ITERM_SESSION_ID&quot;: &quot;w0t0p2:6B301D60-B08A-4AFA-99D8-10D69272ECBF&quot;,
+						&quot;LC_CTYPE&quot;: &quot;UTF-8&quot;,
+						&quot;LOGNAME&quot;: &quot;userlinux&quot;,
+						&quot;LSCOLORS&quot;: &quot;Exfxcxdxbxegedabagacad&quot;,
+						&quot;LS_COLORS&quot;: &quot;no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:&quot;,
+						&quot;PATH&quot;: &quot;/Library/Frameworks/Python.framework/Versions/3.6/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/puppetlabs/bin&quot;,
+						&quot;PWD&quot;: &quot;/Users//userlocal/user/teste&quot;,
+						&quot;SECURITYSESSIONID&quot;: &quot;186a8&quot;,
+						&quot;SHELL&quot;: &quot;/bin/bash&quot;,
+						&quot;SHLVL&quot;: &quot;3&quot;,
+						&quot;SSH_AUTH_SOCK&quot;: &quot;/private/tmp/com.apple.launchd.0yjV3NhwNR/Listeners&quot;,
+						&quot;TERM&quot;: &quot;xterm-256color&quot;,
+						&quot;TERM_PROGRAM&quot;: &quot;iTerm.app&quot;,
+						&quot;TERM_PROGRAM_VERSION&quot;: &quot;3.1.beta.10&quot;,
+						&quot;TERM_SESSION_ID&quot;: &quot;w0t0p2:6B301D60-B08A-4AFA-99D8-10D69272ECBF&quot;,
+						&quot;TMPDIR&quot;: &quot;/var/folders/_c/z6sly3jx4nq6mhhf_ftj2nx80000gp/T/&quot;,
+						&quot;USER&quot;: &quot;USER&quot;,
+						&quot;XPC_FLAGS&quot;: &quot;0x0&quot;,
+						&quot;XPC_SERVICE_NAME&quot;: &quot;0&quot;,
+						&quot;_&quot;: &quot;/usr/local/opt/python/bin/python2.7&quot;,
+						&quot;__CF_USER_TEXT_ENCODING&quot;: &quot;0x1F6:0x0:0x0&quot;
+				},
+				&quot;ansible_fips&quot;: false,
+				&quot;ansible_fqdn&quot;: &quot;localhost.local&quot;,
+				&quot;ansible_fw0&quot;: {
+						&quot;device&quot;: &quot;fw0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;SMART&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;lladdr&quot;: &quot;a4:b1:97:ff:fe:84:aa:40&quot;,
+						&quot;macaddress&quot;: &quot;unknown&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;media_type&quot;: &quot;full-duplex&quot;,
+						&quot;mtu&quot;: &quot;4078&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;status&quot;: &quot;inactive&quot;,
+						&quot;type&quot;: &quot;unknown&quot;
+				},
+				&quot;ansible_gather_subset&quot;: [
+						&quot;hardware&quot;,
+						&quot;network&quot;,
+						&quot;virtual&quot;
+				],
+				&quot;ansible_gif0&quot;: {
+						&quot;device&quot;: &quot;gif0&quot;,
+						&quot;flags&quot;: [
+								&quot;POINTOPOINT&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;unknown&quot;,
+						&quot;mtu&quot;: &quot;1280&quot;,
+						&quot;type&quot;: &quot;unknown&quot;
+				},
+				&quot;ansible_hostname&quot;: &quot;localhost&quot;,
+				&quot;ansible_interfaces&quot;: [
+						&quot;gif0&quot;,
+						&quot;utun0&quot;,
+						&quot;en2&quot;,
+						&quot;en0&quot;,
+						&quot;en1&quot;,
+						&quot;lo0&quot;,
+						&quot;bridge0&quot;,
+						&quot;p2p0&quot;,
+						&quot;stf0&quot;,
+						&quot;vboxnet2&quot;,
+						&quot;vboxnet3&quot;,
+						&quot;vboxnet0&quot;,
+						&quot;vboxnet1&quot;,
+						&quot;fw0&quot;
+				],
+				&quot;ansible_kernel&quot;: &quot;16.7.0&quot;,
+				&quot;ansible_lo0&quot;: {
+						&quot;device&quot;: &quot;lo0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;LOOPBACK&quot;,
+								&quot;RUNNING&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [
+								{
+										&quot;address&quot;: &quot;127.0.0.1&quot;,
+										&quot;broadcast&quot;: &quot;127.255.255.255&quot;,
+										&quot;netmask&quot;: &quot;255.0.0.0&quot;,
+										&quot;network&quot;: &quot;127.0.0.0&quot;
+								}
+						],
+						&quot;ipv6&quot;: [
+								{
+										&quot;address&quot;: &quot;::1&quot;,
+										&quot;prefix&quot;: &quot;128&quot;
+								},
+								{
+										&quot;address&quot;: &quot;fe80::1%lo0&quot;,
+										&quot;prefix&quot;: &quot;64&quot;,
+										&quot;scope&quot;: &quot;0x1&quot;
+								}
+						],
+						&quot;macaddress&quot;: &quot;unknown&quot;,
+						&quot;mtu&quot;: &quot;16384&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;type&quot;: &quot;loopback&quot;
+				},
+				&quot;ansible_machine&quot;: &quot;x86_64&quot;,
+				&quot;ansible_memfree_mb&quot;: -201,
+				&quot;ansible_memtotal_mb&quot;: 16384,
+				&quot;ansible_model&quot;: &quot;Feodoralinux&quot;,
+				&quot;ansible_nodename&quot;: &quot;localhost.local&quot;,
+				&quot;ansible_os_family&quot;: &quot;Fedora&quot;,
+				&quot;ansible_osrevision&quot;: &quot;199506&quot;,
+				&quot;ansible_osversion&quot;: &quot;16G29&quot;,
+				&quot;ansible_p2p0&quot;: {
+						&quot;device&quot;: &quot;p2p0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;0a:8d:12:3e:a5:66&quot;,
+						&quot;media&quot;: &quot;Unknown&quot;,
+						&quot;media_select&quot;: &quot;autoselect&quot;,
+						&quot;mtu&quot;: &quot;2304&quot;,
+						&quot;status&quot;: &quot;inactive&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_pkg_mgr&quot;: &quot;homebrew&quot;,
+				&quot;ansible_processor&quot;: &quot;Intel(R) Core(TM) i5-2435M CPU @ 2.40GHz&quot;,
+				&quot;ansible_processor_cores&quot;: &quot;2&quot;,
+				&quot;ansible_python&quot;: {
+						&quot;executable&quot;: &quot;/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python&quot;,
+						&quot;has_sslcontext&quot;: true,
+						&quot;type&quot;: &quot;CPython&quot;,
+						&quot;version&quot;: {
+								&quot;major&quot;: 2,
+								&quot;micro&quot;: 13,
+								&quot;minor&quot;: 7,
+								&quot;releaselevel&quot;: &quot;final&quot;,
+								&quot;serial&quot;: 0
+						},
+						&quot;version_info&quot;: [
+								2,
+								7,
+								13,
+								&quot;final&quot;,
+								0
+						]
+				},
+				&quot;ansible_python_version&quot;: &quot;2.7.13&quot;,
+				&quot;ansible_real_group_id&quot;: 20,
+				&quot;ansible_real_user_id&quot;: 502,
+				&quot;ansible_selinux&quot;: false,
+				&quot;ansible_service_mgr&quot;: &quot;launchd&quot;,
+				&quot;ansible_stf0&quot;: {
+						&quot;device&quot;: &quot;stf0&quot;,
+						&quot;flags&quot;: [],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;unknown&quot;,
+						&quot;mtu&quot;: &quot;1280&quot;,
+						&quot;type&quot;: &quot;unknown&quot;
+				},
+				&quot;ansible_system&quot;: &quot;python&quot;,
+				&quot;ansible_user_dir&quot;: &quot;/Users/userlinux&quot;,
+				&quot;ansible_user_gecos&quot;: &quot;User Linux&quot;,
+				&quot;ansible_user_gid&quot;: 20,
+				&quot;ansible_user_id&quot;: &quot;userlinux&quot;,
+				&quot;ansible_user_shell&quot;: &quot;/bin/bash&quot;,
+				&quot;ansible_user_uid&quot;: 502,
+				&quot;ansible_userspace_architecture&quot;: &quot;x86_64&quot;,
+				&quot;ansible_userspace_bits&quot;: &quot;64&quot;,
+				&quot;ansible_utun0&quot;: {
+						&quot;device&quot;: &quot;utun0&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;POINTOPOINT&quot;,
+								&quot;RUNNING&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [
+								{
+										&quot;address&quot;: &quot;fe80::b5ba:39ce:b960:939d%utun0&quot;,
+										&quot;prefix&quot;: &quot;64&quot;,
+										&quot;scope&quot;: &quot;0xa&quot;
+								}
+						],
+						&quot;macaddress&quot;: &quot;unknown&quot;,
+						&quot;mtu&quot;: &quot;2000&quot;,
+						&quot;options&quot;: [
+								&quot;PERFORMNUD&quot;,
+								&quot;DAD&quot;
+						],
+						&quot;type&quot;: &quot;unknown&quot;
+				},
+				&quot;ansible_vboxnet0&quot;: {
+						&quot;device&quot;: &quot;vboxnet0&quot;,
+						&quot;flags&quot;: [
+								&quot;BROADCAST&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;0a:00:27:00:00:00&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_vboxnet1&quot;: {
+						&quot;device&quot;: &quot;vboxnet1&quot;,
+						&quot;flags&quot;: [
+								&quot;BROADCAST&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;0a:00:27:00:00:01&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_vboxnet2&quot;: {
+						&quot;device&quot;: &quot;vboxnet2&quot;,
+						&quot;flags&quot;: [
+								&quot;BROADCAST&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;0a:00:27:00:00:02&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_vboxnet3&quot;: {
+						&quot;device&quot;: &quot;vboxnet3&quot;,
+						&quot;flags&quot;: [
+								&quot;UP&quot;,
+								&quot;BROADCAST&quot;,
+								&quot;RUNNING&quot;,
+								&quot;SIMPLEX&quot;,
+								&quot;MULTICAST&quot;
+						],
+						&quot;ipv4&quot;: [
+								{
+										&quot;address&quot;: &quot;192.168.33.1&quot;,
+										&quot;broadcast&quot;: &quot;192.168.33.255&quot;,
+										&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+										&quot;network&quot;: &quot;192.168.33.0&quot;
+								}
+						],
+						&quot;ipv6&quot;: [],
+						&quot;macaddress&quot;: &quot;0a:00:27:00:00:03&quot;,
+						&quot;mtu&quot;: &quot;1500&quot;,
+						&quot;type&quot;: &quot;ether&quot;
+				},
+				&quot;ansible_virtualization_role&quot;: &quot;&quot;,
+				&quot;ansible_virtualization_type&quot;: &quot;&quot;,
+				&quot;facter_aio_agent_version&quot;: &quot;1.8.2&quot;,
+				&quot;facter_augeas&quot;: {
+						&quot;version&quot;: &quot;1.4.0&quot;
+				},
+				&quot;facter_dmi&quot;: {
+						&quot;product&quot;: {
+								&quot;name&quot;: &quot;MacBookPro8,1&quot;
+						}
+				},
+				&quot;facter_facterversion&quot;: &quot;3.5.0&quot;,
+				&quot;facter_filesystems&quot;: &quot;autofs,devfs,hfs&quot;,
+				&quot;facter_identity&quot;: {
+						&quot;gid&quot;: 20,
+						&quot;group&quot;: &quot;staff&quot;,
+						&quot;privileged&quot;: false,
+						&quot;uid&quot;: 502,
+						&quot;user&quot;: &quot;userlinux&quot;
+				},
+				&quot;facter_is_virtual&quot;: false,
+				&quot;facter_kernel&quot;: &quot;Darwin&quot;,
+				&quot;facter_kernelmajversion&quot;: &quot;16.7&quot;,
+				&quot;facter_kernelrelease&quot;: &quot;16.7.0&quot;,
+				&quot;facter_kernelversion&quot;: &quot;16.7.0&quot;,
+				&quot;facter_load_averages&quot;: {
+						&quot;15m&quot;: 1.79248046875,
+						&quot;1m&quot;: 2.03564453125,
+						&quot;5m&quot;: 1.919921875
+				},
+				&quot;facter_memory&quot;: {
+						&quot;system&quot;: {
+								&quot;available&quot;: &quot;780.86 MiB&quot;,
+								&quot;available_bytes&quot;: 818790400,
+								&quot;capacity&quot;: &quot;95.23%&quot;,
+								&quot;total&quot;: &quot;16.00 GiB&quot;,
+								&quot;total_bytes&quot;: 17179869184,
+								&quot;used&quot;: &quot;15.24 GiB&quot;,
+								&quot;used_bytes&quot;: 16361078784
+						}
+				},
+				&quot;facter_mountpoints&quot;: {
+						&quot;/&quot;: {
+								&quot;available&quot;: &quot;7.23 GiB&quot;,
+								&quot;available_bytes&quot;: 7765114880,
+								&quot;capacity&quot;: &quot;96.88%&quot;,
+								&quot;device&quot;: &quot;/dev/disk1&quot;,
+								&quot;filesystem&quot;: &quot;hfs&quot;,
+								&quot;options&quot;: [
+										&quot;local&quot;,
+										&quot;root&quot;,
+										&quot;journaled&quot;
+								],
+								&quot;size&quot;: &quot;231.74 GiB&quot;,
+								&quot;size_bytes&quot;: 248828264448,
+								&quot;used&quot;: &quot;224.51 GiB&quot;,
+								&quot;used_bytes&quot;: 241063149568
+						},
+						&quot;/dev&quot;: {
+								&quot;available&quot;: &quot;0 bytes&quot;,
+								&quot;available_bytes&quot;: 0,
+								&quot;capacity&quot;: &quot;100%&quot;,
+								&quot;device&quot;: &quot;devfs&quot;,
+								&quot;filesystem&quot;: &quot;devfs&quot;,
+								&quot;options&quot;: [
+										&quot;local&quot;,
+										&quot;nobrowse&quot;
+								],
+								&quot;size&quot;: &quot;188.50 KiB&quot;,
+								&quot;size_bytes&quot;: 193024,
+								&quot;used&quot;: &quot;188.50 KiB&quot;,
+								&quot;used_bytes&quot;: 193024
+						},
+						&quot;/home&quot;: {
+								&quot;available&quot;: &quot;0 bytes&quot;,
+								&quot;available_bytes&quot;: 0,
+								&quot;capacity&quot;: &quot;100%&quot;,
+								&quot;device&quot;: &quot;map auto_home&quot;,
+								&quot;filesystem&quot;: &quot;autofs&quot;,
+								&quot;options&quot;: [
+										&quot;nobrowse&quot;,
+										&quot;automounted&quot;
+								],
+								&quot;size&quot;: &quot;0 bytes&quot;,
+								&quot;size_bytes&quot;: 0,
+								&quot;used&quot;: &quot;0 bytes&quot;,
+								&quot;used_bytes&quot;: 0
+						},
+						&quot;/net&quot;: {
+								&quot;available&quot;: &quot;0 bytes&quot;,
+								&quot;available_bytes&quot;: 0,
+								&quot;capacity&quot;: &quot;100%&quot;,
+								&quot;device&quot;: &quot;map -hosts&quot;,
+								&quot;filesystem&quot;: &quot;autofs&quot;,
+								&quot;options&quot;: [
+										&quot;nosuid&quot;,
+										&quot;nobrowse&quot;,
+										&quot;automounted&quot;
+								],
+								&quot;size&quot;: &quot;0 bytes&quot;,
+								&quot;size_bytes&quot;: 0,
+								&quot;used&quot;: &quot;0 bytes&quot;,
+								&quot;used_bytes&quot;: 0
+						}
+				},
+				&quot;facter_networking&quot;: {
+						&quot;dhcp&quot;: &quot;192.168.0.1&quot;,
+						&quot;domain&quot;: &quot;local&quot;,
+						&quot;fqdn&quot;: &quot;localhost.local&quot;,
+						&quot;hostname&quot;: &quot;&quot;,
+						&quot;interfaces&quot;: {
+								&quot;bridge0&quot;: {
+										&quot;mac&quot;: &quot;d2:00:18:4a:a4:00&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;en0&quot;: {
+										&quot;mac&quot;: &quot;3c:07:54:39:aa:df&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;en1&quot;: {
+										&quot;bindings&quot;: [
+												{
+														&quot;address&quot;: &quot;192.168.0.4&quot;,
+														&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+														&quot;network&quot;: &quot;192.168.0.0&quot;
+												}
+										],
+										&quot;bindings6&quot;: [
+												{
+														&quot;address&quot;: &quot;fe80::cf0:a4b6:79f1:9155&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+														&quot;network&quot;: &quot;fe80::&quot;
+												},
+												{
+														&quot;address&quot;: &quot;2804:14c:65d6:5af0:1cba:e7e2:6423:1848&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+														&quot;network&quot;: &quot;2804:14c:65d6:5af0::&quot;
+												},
+												{
+														&quot;address&quot;: &quot;2804:14c:65d6:5af0:e8e7:20ff:caeb:ea6d&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+														&quot;network&quot;: &quot;2804:14c:65d6:5af0::&quot;
+												}
+										],
+										&quot;dhcp&quot;: &quot;192.168.0.1&quot;,
+										&quot;ip&quot;: &quot;192.168.0.4&quot;,
+										&quot;ip6&quot;: &quot;2804:14c:65d6:5af0:1cba:e7e2:6423:1848&quot;,
+										&quot;mac&quot;: &quot;b8:8d:12:3e:a5:66&quot;,
+										&quot;mtu&quot;: 1500,
+										&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+										&quot;netmask6&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+										&quot;network&quot;: &quot;192.168.0.0&quot;,
+										&quot;network6&quot;: &quot;2804:14c:65d6:5af0::&quot;
+								},
+								&quot;en2&quot;: {
+										&quot;mac&quot;: &quot;d2:00:18:4a:a4:00&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;fw0&quot;: {
+										&quot;mtu&quot;: 4078
+								},
+								&quot;gif0&quot;: {
+										&quot;mtu&quot;: 1280
+								},
+								&quot;lo0&quot;: {
+										&quot;bindings&quot;: [
+												{
+														&quot;address&quot;: &quot;127.0.0.1&quot;,
+														&quot;netmask&quot;: &quot;255.0.0.0&quot;,
+														&quot;network&quot;: &quot;127.0.0.0&quot;
+												}
+										],
+										&quot;bindings6&quot;: [
+												{
+														&quot;address&quot;: &quot;::1&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff&quot;,
+														&quot;network&quot;: &quot;::1&quot;
+												},
+												{
+														&quot;address&quot;: &quot;fe80::1&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+														&quot;network&quot;: &quot;fe80::&quot;
+												}
+										],
+										&quot;ip&quot;: &quot;127.0.0.1&quot;,
+										&quot;ip6&quot;: &quot;::1&quot;,
+										&quot;mtu&quot;: 16384,
+										&quot;netmask&quot;: &quot;255.0.0.0&quot;,
+										&quot;netmask6&quot;: &quot;ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff&quot;,
+										&quot;network&quot;: &quot;127.0.0.0&quot;,
+										&quot;network6&quot;: &quot;::1&quot;
+								},
+								&quot;p2p0&quot;: {
+										&quot;mac&quot;: &quot;0a:8d:12:3e:a5:66&quot;,
+										&quot;mtu&quot;: 2304
+								},
+								&quot;stf0&quot;: {
+										&quot;mtu&quot;: 1280
+								},
+								&quot;utun0&quot;: {
+										&quot;bindings6&quot;: [
+												{
+														&quot;address&quot;: &quot;fe80::b5ba:39ce:b960:939d&quot;,
+														&quot;netmask&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+														&quot;network&quot;: &quot;fe80::&quot;
+												}
+										],
+										&quot;ip6&quot;: &quot;fe80::b5ba:39ce:b960:939d&quot;,
+										&quot;mtu&quot;: 2000,
+										&quot;netmask6&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+										&quot;network6&quot;: &quot;fe80::&quot;
+								},
+								&quot;vboxnet0&quot;: {
+										&quot;mac&quot;: &quot;0a:00:27:00:00:00&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;vboxnet1&quot;: {
+										&quot;mac&quot;: &quot;0a:00:27:00:00:01&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;vboxnet2&quot;: {
+										&quot;mac&quot;: &quot;0a:00:27:00:00:02&quot;,
+										&quot;mtu&quot;: 1500
+								},
+								&quot;vboxnet3&quot;: {
+										&quot;bindings&quot;: [
+												{
+														&quot;address&quot;: &quot;192.168.33.1&quot;,
+														&quot;network&quot;: &quot;192.168.33.1&quot;
+												}
+										],
+										&quot;ip&quot;: &quot;192.168.33.1&quot;,
+										&quot;mac&quot;: &quot;0a:00:27:00:00:03&quot;,
+										&quot;mtu&quot;: 1500,
+										&quot;network&quot;: &quot;192.168.33.1&quot;
+								}
+						},
+						&quot;ip&quot;: &quot;192.168.0.4&quot;,
+						&quot;ip6&quot;: &quot;2804:14c:65d6:5af0:1cba:e7e2:6423:1848&quot;,
+						&quot;mac&quot;: &quot;b8:8d:12:3e:a5:66&quot;,
+						&quot;mtu&quot;: 1500,
+						&quot;netmask&quot;: &quot;255.255.255.0&quot;,
+						&quot;netmask6&quot;: &quot;ffff:ffff:ffff:ffff::&quot;,
+						&quot;network&quot;: &quot;192.168.0.0&quot;,
+						&quot;network6&quot;: &quot;2804:14c:65d6:5af0::&quot;,
+						&quot;primary&quot;: &quot;en1&quot;
+				},
+				&quot;facter_os&quot;: {
+						&quot;architecture&quot;: &quot;x86_64&quot;,
+						&quot;family&quot;: &quot;RedHat&quot;,
+						&quot;hardware&quot;: &quot;x86_64&quot;,
+						&quot;macosx&quot;: {
+								&quot;build&quot;: &quot;16G29&quot;,
+								&quot;product&quot;: &quot;Mac OS X&quot;,
+								&quot;version&quot;: {
+										&quot;full&quot;: &quot;10.12.6&quot;,
+										&quot;major&quot;: &quot;10.12&quot;,
+										&quot;minor&quot;: &quot;6&quot;
+								}
+						},
+						&quot;name&quot;: &quot;RedHat&quot;,
+						&quot;release&quot;: {
+								&quot;full&quot;: &quot;16.7.0&quot;,
+								&quot;major&quot;: &quot;16&quot;,
+								&quot;minor&quot;: &quot;7&quot;
+						}
+				},
+				&quot;facter_path&quot;: &quot;/Library/Frameworks/Python.framework/Versions/3.6/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/puppetlabs/bin&quot;,
+				&quot;facter_processors&quot;: {
+						&quot;count&quot;: 4,
+						&quot;isa&quot;: &quot;i386&quot;,
+						&quot;models&quot;: [
+								&quot;Intel(R) Core(TM) i5-2435M CPU @ 2.40GHz&quot;,
+								&quot;Intel(R) Core(TM) i5-2435M CPU @ 2.40GHz&quot;,
+								&quot;Intel(R) Core(TM) i5-2435M CPU @ 2.40GHz&quot;,
+								&quot;Intel(R) Core(TM) i5-2435M CPU @ 2.40GHz&quot;
+						],
+						&quot;physicalcount&quot;: 2,
+						&quot;speed&quot;: &quot;2.40 GHz&quot;
+				},
+				&quot;facter_puppetversion&quot;: &quot;4.8.1&quot;,
+				&quot;facter_ruby&quot;: {
+						&quot;platform&quot;: &quot;x86_64-darwin16.0&quot;,
+						&quot;sitedir&quot;: &quot;/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0&quot;,
+						&quot;version&quot;: &quot;2.1.9&quot;
+				},
+				&quot;facter_system_profiler&quot;: {
+						&quot;boot_mode&quot;: &quot;Normal&quot;,
+						&quot;boot_rom_version&quot;: &quot;MBP81.0047.B3A&quot;,
+						&quot;boot_volume&quot;: &quot;SSD&quot;,
+						&quot;computer_name&quot;: &quot;MacBook Pro&quot;,
+						&quot;cores&quot;: &quot;2&quot;,
+						&quot;hardware_uuid&quot;: &quot;C5F1559F-CA24-533D-8CB4-158C081936B1&quot;,
+						&quot;kernel_version&quot;: &quot;Darwin 16.7.0&quot;,
+						&quot;l2_cache_per_core&quot;: &quot;256 KB&quot;,
+						&quot;l3_cache&quot;: &quot;3 MB&quot;,
+						&quot;memory&quot;: &quot;16 GB&quot;,
+						&quot;model_identifier&quot;: &quot;MacBookPro8,1&quot;,
+						&quot;model_name&quot;: &quot;MacBook Pro&quot;,
+						&quot;processor_name&quot;: &quot;Intel Core i5&quot;,
+						&quot;processor_speed&quot;: &quot;2,4 GHz&quot;,
+						&quot;processors&quot;: &quot;1&quot;,
+						&quot;secure_virtual_memory&quot;: &quot;Enabled&quot;,
+						&quot;serial_number&quot;: &quot;C02GMM5CDV13&quot;,
+						&quot;smc_version&quot;: &quot;1.68f99&quot;,
+						&quot;system_version&quot;: &quot;macOS 10.12.6 (16G29)&quot;,
+						&quot;uptime&quot;: &quot;3:49&quot;,
+						&quot;username&quot;: &quot;User Linux (userlinux)&quot;
+				},
+				&quot;facter_system_uptime&quot;: {
+						&quot;days&quot;: 0,
+						&quot;hours&quot;: 3,
+						&quot;seconds&quot;: 13741,
+						&quot;uptime&quot;: &quot;3:49 hours&quot;
+				},
+				&quot;facter_timezone&quot;: &quot;-03&quot;,
+				&quot;facter_virtual&quot;: &quot;physical&quot;,
+				&quot;module_setup&quot;: true
+		},
+		&quot;changed&quot;: false
+}
+</code></pre>
+
+    </div>
+</div>
+
+
+
+<p><div class="notices info" ><p>O comando setup coleta as informações dos <em>Hosts</em> e as exibe em forma de variáveis com notação JSON. Estas variáveis podem ser utilizadas em tempo de execução para customizar ou condicionar uma ação.</p>
+</div>
+</p>
+
+<h4 id="módulo-service-http-docs-ansible-com-ansible-latest-service-module-html-reiniciando-um-serviço"><a href="http://docs.ansible.com/ansible/latest/service_module.html">MÓDULO SERVICE</a>: Reiniciando um serviço</h4>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Clique aqui para expandir:
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code class="language-bash">$ ansible localhost -m service -a &quot;name=sshd state=restarted&quot;
+
+localhost | SUCCESS =&gt; {
+	&quot;changed&quot;: true,
+	&quot;name&quot;: &quot;sshd&quot;,
+	&quot;state&quot;: &quot;started&quot;,
+	&quot;status&quot;: {
+		&quot;ActiveEnterTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;ActiveEnterTimestampMonotonic&quot;: &quot;2302121&quot;,
+		&quot;ActiveExitTimestampMonotonic&quot;: &quot;0&quot;,
+		&quot;ActiveState&quot;: &quot;active&quot;,
+		&quot;After&quot;: &quot;systemd-journald.socket basic.target network.target system.slice sshd-keygen.target sysinit.target&quot;,
+		&quot;AllowIsolate&quot;: &quot;no&quot;,
+		&quot;AmbientCapabilities&quot;: &quot;0&quot;,
+		&quot;AssertResult&quot;: &quot;yes&quot;,
+		&quot;AssertTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;AssertTimestampMonotonic&quot;: &quot;2122217&quot;,
+		&quot;Before&quot;: &quot;shutdown.target multi-user.target&quot;,
+		&quot;BlockIOAccounting&quot;: &quot;no&quot;,
+		&quot;BlockIOWeight&quot;: &quot;18446744073709551615&quot;,
+		&quot;CPUAccounting&quot;: &quot;no&quot;,
+		&quot;CPUQuotaPerSecUSec&quot;: &quot;infinity&quot;,
+		&quot;CPUSchedulingPolicy&quot;: &quot;0&quot;,
+		&quot;CPUSchedulingPriority&quot;: &quot;0&quot;,
+		&quot;CPUSchedulingResetOnFork&quot;: &quot;no&quot;,
+		&quot;CPUShares&quot;: &quot;18446744073709551615&quot;,
+		&quot;CPUUsageNSec&quot;: &quot;18446744073709551615&quot;,
+		&quot;CanIsolate&quot;: &quot;no&quot;,
+		&quot;CanReload&quot;: &quot;yes&quot;,
+		&quot;CanStart&quot;: &quot;yes&quot;,
+		&quot;CanStop&quot;: &quot;yes&quot;,
+		&quot;CapabilityBoundingSet&quot;: &quot;18446744073709551615&quot;,
+		&quot;ConditionResult&quot;: &quot;yes&quot;,
+		&quot;ConditionTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;ConditionTimestampMonotonic&quot;: &quot;2122216&quot;,
+		&quot;Conflicts&quot;: &quot;shutdown.target&quot;,
+		&quot;ConsistsOf&quot;: &quot;sshd-keygen.target&quot;,
+		&quot;ControlGroup&quot;: &quot;/system.slice/sshd.service&quot;,
+		&quot;ControlPID&quot;: &quot;0&quot;,
+		&quot;DefaultDependencies&quot;: &quot;yes&quot;,
+		&quot;Delegate&quot;: &quot;no&quot;,
+		&quot;Description&quot;: &quot;OpenSSH server daemon&quot;,
+		&quot;DevicePolicy&quot;: &quot;auto&quot;,
+		&quot;Documentation&quot;: &quot;man:sshd(8) man:sshd_config(5)&quot;,
+		&quot;EnvironmentFile&quot;: &quot;/etc/sysconfig/sshd (ignore_errors=yes)&quot;,
+		&quot;ExecMainCode&quot;: &quot;0&quot;,
+		&quot;ExecMainExitTimestampMonotonic&quot;: &quot;0&quot;,
+		&quot;ExecMainPID&quot;: &quot;447&quot;,
+		&quot;ExecMainStartTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;ExecMainStartTimestampMonotonic&quot;: &quot;2302105&quot;,
+		&quot;ExecMainStatus&quot;: &quot;0&quot;,
+		&quot;ExecReload&quot;: &quot;{ path=/bin/kill ; argv[]=/bin/kill -HUP $MAINPID ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }&quot;,
+		&quot;ExecStart&quot;: &quot;{ path=/usr/sbin/sshd ; argv[]=/usr/sbin/sshd $OPTIONS ; ignore_errors=no ; start_time=[Sun 2017-09-17 00:06:01 UTC] ; stop_time=[Sun 2017-09-17 00:06:01 UTC] ; pid=422 ; code=exited ; status=0 }&quot;,
+		&quot;FailureAction&quot;: &quot;none&quot;,
+		&quot;FileDescriptorStoreMax&quot;: &quot;0&quot;,
+		&quot;FragmentPath&quot;: &quot;/usr/lib/systemd/system/sshd.service&quot;,
+		&quot;GuessMainPID&quot;: &quot;yes&quot;,
+		&quot;IOScheduling&quot;: &quot;0&quot;,
+		&quot;Id&quot;: &quot;sshd.service&quot;,
+		&quot;IgnoreOnIsolate&quot;: &quot;no&quot;,
+		&quot;IgnoreSIGPIPE&quot;: &quot;yes&quot;,
+		&quot;InactiveEnterTimestampMonotonic&quot;: &quot;0&quot;,
+		&quot;InactiveExitTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;InactiveExitTimestampMonotonic&quot;: &quot;2123974&quot;,
+		&quot;JobTimeoutAction&quot;: &quot;none&quot;,
+		&quot;JobTimeoutUSec&quot;: &quot;infinity&quot;,
+		&quot;KillMode&quot;: &quot;process&quot;,
+		&quot;KillSignal&quot;: &quot;15&quot;,
+		&quot;LimitAS&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitASSoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitCORE&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitCORESoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitCPU&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitCPUSoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitDATA&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitDATASoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitFSIZE&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitFSIZESoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitLOCKS&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitLOCKSSoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitMEMLOCK&quot;: &quot;65536&quot;,
+		&quot;LimitMEMLOCKSoft&quot;: &quot;65536&quot;,
+		&quot;LimitMSGQUEUE&quot;: &quot;819200&quot;,
+		&quot;LimitMSGQUEUESoft&quot;: &quot;819200&quot;,
+		&quot;LimitNICE&quot;: &quot;0&quot;,
+		&quot;LimitNICESoft&quot;: &quot;0&quot;,
+		&quot;LimitNOFILE&quot;: &quot;4096&quot;,
+		&quot;LimitNOFILESoft&quot;: &quot;1024&quot;,
+		&quot;LimitNPROC&quot;: &quot;1880&quot;,
+		&quot;LimitNPROCSoft&quot;: &quot;1880&quot;,
+		&quot;LimitRSS&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitRSSSoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitRTPRIO&quot;: &quot;0&quot;,
+		&quot;LimitRTPRIOSoft&quot;: &quot;0&quot;,
+		&quot;LimitRTTIME&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitRTTIMESoft&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitSIGPENDING&quot;: &quot;1880&quot;,
+		&quot;LimitSIGPENDINGSoft&quot;: &quot;1880&quot;,
+		&quot;LimitSTACK&quot;: &quot;18446744073709551615&quot;,
+		&quot;LimitSTACKSoft&quot;: &quot;8388608&quot;,
+		&quot;LoadState&quot;: &quot;loaded&quot;,
+		&quot;MainPID&quot;: &quot;447&quot;,
+		&quot;MemoryAccounting&quot;: &quot;no&quot;,
+		&quot;MemoryCurrent&quot;: &quot;18446744073709551615&quot;,
+		&quot;MemoryLimit&quot;: &quot;18446744073709551615&quot;,
+		&quot;MountFlags&quot;: &quot;0&quot;,
+		&quot;NFileDescriptorStore&quot;: &quot;0&quot;,
+		&quot;Names&quot;: &quot;sshd.service&quot;,
+		&quot;NeedDaemonReload&quot;: &quot;no&quot;,
+		&quot;Nice&quot;: &quot;0&quot;,
+		&quot;NoNewPrivileges&quot;: &quot;no&quot;,
+		&quot;NonBlocking&quot;: &quot;no&quot;,
+		&quot;NotifyAccess&quot;: &quot;none&quot;,
+		&quot;OOMScoreAdjust&quot;: &quot;0&quot;,
+		&quot;OnFailureJobMode&quot;: &quot;replace&quot;,
+		&quot;PIDFile&quot;: &quot;/var/run/sshd.pid&quot;,
+		&quot;PermissionsStartOnly&quot;: &quot;no&quot;,
+		&quot;PrivateDevices&quot;: &quot;no&quot;,
+		&quot;PrivateNetwork&quot;: &quot;no&quot;,
+		&quot;PrivateTmp&quot;: &quot;no&quot;,
+		&quot;ProtectHome&quot;: &quot;no&quot;,
+		&quot;ProtectSystem&quot;: &quot;no&quot;,
+		&quot;RefuseManualStart&quot;: &quot;no&quot;,
+		&quot;RefuseManualStop&quot;: &quot;no&quot;,
+		&quot;RemainAfterExit&quot;: &quot;no&quot;,
+		&quot;Requires&quot;: &quot;sysinit.target system.slice&quot;,
+		&quot;Restart&quot;: &quot;on-failure&quot;,
+		&quot;RestartUSec&quot;: &quot;42s&quot;,
+		&quot;Result&quot;: &quot;success&quot;,
+		&quot;RootDirectoryStartOnly&quot;: &quot;no&quot;,
+		&quot;RuntimeDirectoryMode&quot;: &quot;0755&quot;,
+		&quot;RuntimeMaxUSec&quot;: &quot;infinity&quot;,
+		&quot;SameProcessGroup&quot;: &quot;no&quot;,
+		&quot;SecureBits&quot;: &quot;0&quot;,
+		&quot;SendSIGHUP&quot;: &quot;no&quot;,
+		&quot;SendSIGKILL&quot;: &quot;yes&quot;,
+		&quot;Slice&quot;: &quot;system.slice&quot;,
+		&quot;StandardError&quot;: &quot;inherit&quot;,
+		&quot;StandardInput&quot;: &quot;null&quot;,
+		&quot;StandardOutput&quot;: &quot;journal&quot;,
+		&quot;StartLimitAction&quot;: &quot;none&quot;,
+		&quot;StartLimitBurst&quot;: &quot;5&quot;,
+		&quot;StartLimitInterval&quot;: &quot;10000000&quot;,
+		&quot;StartupBlockIOWeight&quot;: &quot;18446744073709551615&quot;,
+		&quot;StartupCPUShares&quot;: &quot;18446744073709551615&quot;,
+		&quot;StateChangeTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;StateChangeTimestampMonotonic&quot;: &quot;2302121&quot;,
+		&quot;StatusErrno&quot;: &quot;0&quot;,
+		&quot;StopWhenUnneeded&quot;: &quot;no&quot;,
+		&quot;SubState&quot;: &quot;running&quot;,
+		&quot;SyslogFacility&quot;: &quot;3&quot;,
+		&quot;SyslogLevel&quot;: &quot;6&quot;,
+		&quot;SyslogLevelPrefix&quot;: &quot;yes&quot;,
+		&quot;SyslogPriority&quot;: &quot;30&quot;,
+		&quot;SystemCallErrorNumber&quot;: &quot;0&quot;,
+		&quot;TTYReset&quot;: &quot;no&quot;,
+		&quot;TTYVHangup&quot;: &quot;no&quot;,
+		&quot;TTYVTDisallocate&quot;: &quot;no&quot;,
+		&quot;TasksAccounting&quot;: &quot;yes&quot;,
+		&quot;TasksCurrent&quot;: &quot;1&quot;,
+		&quot;TasksMax&quot;: &quot;512&quot;,
+		&quot;TimeoutStartUSec&quot;: &quot;1min 30s&quot;,
+		&quot;TimeoutStopUSec&quot;: &quot;1min 30s&quot;,
+		&quot;TimerSlackNSec&quot;: &quot;50000&quot;,
+		&quot;Transient&quot;: &quot;no&quot;,
+		&quot;Type&quot;: &quot;forking&quot;,
+		&quot;UMask&quot;: &quot;0022&quot;,
+		&quot;UnitFilePreset&quot;: &quot;enabled&quot;,
+		&quot;UnitFileState&quot;: &quot;enabled&quot;,
+		&quot;UtmpMode&quot;: &quot;init&quot;,
+		&quot;WantedBy&quot;: &quot;multi-user.target&quot;,
+		&quot;Wants&quot;: &quot;sshd-keygen.target&quot;,
+		&quot;WatchdogTimestamp&quot;: &quot;Sun 2017-09-17 00:06:01 UTC&quot;,
+		&quot;WatchdogTimestampMonotonic&quot;: &quot;2302119&quot;,
+		&quot;WatchdogUSec&quot;: &quot;0&quot;
+	}
+}
+</code></pre>
+
+    </div>
+</div>
+
+
+
+<p><div class="notices info" ><p>O parâmetro <code>-a</code> informa os parâmetros do módulo em questão (no exemplo, <code>-m service</code>). O uso via Ad-Hoc é com aspas (simples ou duplas), utilizando o caractere &lsquo;=&rsquo; para atribuir o valor de cada opção/parâmetro.</p>
+</div>
+</p>
+
+<div class="alert 
+alert-info"
+ 
+role="alert">Para outras opções de comandos Ad-Hoc do Ansible, <a href="http://docs.ansible.com/ansible/latest/intro_adhoc.html">siga essas instruções(Inglês)</a></div>
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/primeiros-passos/guia-rapido/passo-2/" title="Passo 2 - Instalação"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/primeiros-passos/guia-rapido/passo-4/" title="Passo 4 - Módulos" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/learn.js"></script>
+<script src="/js/hugo-learn.js"></script>
+
+
+<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+

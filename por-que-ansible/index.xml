@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Por que Ansible? on Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/por-que-ansible/</link>
+    <description>Recent content in Por que Ansible? on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    
+	<atom:link href="https://ansible-br.github.io/por-que-ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Curva de Aprendizado</title>
+      <link>https://ansible-br.github.io/por-que-ansible/curva-aprendizado/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/curva-aprendizado/</guid>
+      <description>Fácil aprendizado O Ansible tem um aprendizado muito rápido, sendo fácil a instalação e configuração inicial. Em menos de 30 minutos é possível instalar, configurar e executar comandos Ad-Hoc para ’n’ servidores para resolver um problema específico: Ajustes de horário de verão, sincronização de hora, troca de senha de root, atualizar servidores, restartar serviços, etc.
+A sintaxe e o fluxo de trabalho são de simples de compreensão, facilitando o aprendizado de novos usuários.</description>
+    </item>
+    
+    <item>
+      <title>Infra Mutável</title>
+      <link>https://ansible-br.github.io/por-que-ansible/infra-mutavel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/infra-mutavel/</guid>
+      <description>Mudanças sem traumas: Sabemos que o modelo antigo de infraestrutura leva um tempo para convergir para ambiente totalmente automatizado (Infra as Code). Os ambientes administrados por Sysadmins são constantemente modificados (Infra mutável) e qualquer mudança é onerosa, gera desgastes e muitas intervenções manuais.
+O Ansible se adapta bem para ambientes mistos, convivendo sem problemas com ambientes parcialmente ou majoritariamente automatizados. A transição de um modelo para outro será menos traumática com Ansible.</description>
+    </item>
+    
+    <item>
+      <title>Sem agentes</title>
+      <link>https://ansible-br.github.io/por-que-ansible/sem-agentes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/sem-agentes/</guid>
+      <description>Somente um “Ansible Control”: Evite o problema de &amp;ldquo;gerenciar o gerencimento&amp;rdquo;, comum em vários sistemas de automação.
+Ansible não necessita de agentes instalados nas pontas. A única necessidade é um servidor com Ansible instalado (Ansible Control) com acesso aos servidores a serem administrados (hosts) através dos protocolos SSH (para ambientes Linux) ou WINRM (Acesso remoto Windows) . As Playbooks empurram (push) as configurações desejadas nos hosts definidos no inventário e podem inclusive ser executadas Ad-Hoc (via linha de comando sem a necessidade de definições em arquivos).</description>
+    </item>
+    
+    <item>
+      <title>Quem usa?</title>
+      <link>https://ansible-br.github.io/por-que-ansible/quem-usa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/quem-usa/</guid>
+      <description>Caixa Econômica Federal: O provisionamento dos mais de 50.000 caixas eletrônicos é feito com Ansible
+A 4Linux projetou essa e outras automações para a Caixa. Hoje a empresa ministra cursos de DevOps com Ansible no conteúdo programático Mais informações PJe 2.0 TJDFT: O principal sistema (Processo Judicial Eletrônico) do Tribunal de Justiça do Distrito Federal e Territórios - TJDFT foi provisionado, configurado e mantido com Ansible. Hoje o PJe 2.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://ansible-br.github.io/por-que-ansible/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/faq/</guid>
+      <description>Ansible é considerado ou não como gerência de configuração? Existem diversas discussões na internet sobre se o Ansible é considerado uma ferramenta de Gerência de Configuração. A parte teórica da gerência de configuração se baseia na escola de GCONF apresentado por Mark Burgess, criador do CFEngine, onde o mesmo diz que os princípios do GCONF são Idempotência e estado desejado.
+Idempotência é a característica de verificar o estado atual do que será modificado.</description>
+    </item>
+    
+  </channel>
+</rss>

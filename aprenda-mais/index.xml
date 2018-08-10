@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aprenda mais on Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/aprenda-mais/</link>
+    <description>Recent content in Aprenda mais on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    
+	<atom:link href="https://ansible-br.github.io/aprenda-mais/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

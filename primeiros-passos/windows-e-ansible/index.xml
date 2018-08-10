@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows e Ansible on Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/</link>
+    <description>Recent content in Windows e Ansible on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    
+	<atom:link href="https://ansible-br.github.io/primeiros-passos/windows-e-ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows - Conceitos Básicos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-1/</guid>
+      <description>Windows &amp;amp; Ansible - Conceitos básicos Há algumas diferenças na utilização de Ansible para gerenciar servidores Windows quando comparados com os servidores Linux.
+Forma de Conexão A primeira diferença é na forma de conexão entre o Ansible Control e o host. É utilizado o Windows Remote Management (WinRM), que é a implementação da Microsoft do Web Services Management (WS-Man), um padrão aberto do Distributed Management Task Force (DMTF), em que se utiliza um web service baseado em SOAP para gerência remota de diversos dispositivos.</description>
+    </item>
+    
+    <item>
+      <title>Windows - Pré-requisitos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/windows-e-ansible/windows-2/</guid>
+      <description>Configurando um Host Windows A configuração de um host Windows para ser gerenciado com Ansible se concentra em três componentes:
+ .Net Framework Windows Management Framework Configuração WinRM  Versões suportadas do Windows O Ansible suporta todas as versões atuais e com suporte estendido do Windows.
+ Desktop: 7, 8.1 e 10 Server: 2008, 2008 R2, 2012, 2012 R2 e 2016  .Net Framework É necessário que a versão 4 do .</description>
+    </item>
+    
+  </channel>
+</rss>

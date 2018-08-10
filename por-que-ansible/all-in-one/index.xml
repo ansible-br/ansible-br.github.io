@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All-in-one: Tudo em um on Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/por-que-ansible/all-in-one/</link>
+    <description>Recent content in All-in-one: Tudo em um on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    
+	<atom:link href="https://ansible-br.github.io/por-que-ansible/all-in-one/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gerência de Configuração</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/gerencia-configuracao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/gerencia-configuracao/</guid>
+      <description> GCONF Código, ciclo de vida e mudanças podem ser feitas através do inventário, playbooks e roles no Ansible. É possível gerenciar estados desejados e idempotência nativamente nas tarefas que serão executadas. Tudo de forma muito simples e robusta.
+O Ansible torna a automação mais acessível. Veja mais (inglês) </description>
+    </item>
+    
+    <item>
+      <title>Orquestração</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/orquestracao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/orquestracao/</guid>
+      <description> Maestro da Infra: Motor simplificado e poderoso de orquestração. O Ansible se integra com quase todas as áreas da infraestrutura, desde o provisionamento de VMs até liberação de regras no firewall. Também foca nas áreas onde outras ferramentas deixam lacunas tais como parada zero (Rolling updates), integrações contínuas (Continuous Integration) para aplicações multi-camadas em toda a infraestrutura.
+Orquestração complexa? Solução simples. Veja mais (inglês)  </description>
+    </item>
+    
+    <item>
+      <title>Provisionamento</title>
+      <link>https://ansible-br.github.io/por-que-ansible/all-in-one/provisionamento/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/por-que-ansible/all-in-one/provisionamento/</guid>
+      <description> PaaS, SaaS, IaaS: O Ansible possui módulos para containers (Docker), Virtualização (VMware, AWS, OpenStack, Azure, Ovirt) e podem facilmente se integrar com outras tarefas das etapas anteriores.
+Pronto para diversas Clouds&amp;hellip; Tudo na mesma linguagem de Playbooks Veja mais (inglês)  </description>
+    </item>
+    
+  </channel>
+</rss>

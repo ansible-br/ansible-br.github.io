@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Materiais de Estudo on Documentação Ansible-br</title>
+    <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/</link>
+    <description>Recent content in Materiais de Estudo on Documentação Ansible-br</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    
+	<atom:link href="https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Livros</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/livros/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/livros/</guid>
+      <description>Segue abaixo alguns livros de referência no aprendizado do Ansible.
+   Título Autor Editora Idioma     Ansible: From Beginner to Pro Michal Heap Apress Inglês   Ansible for DevOps Jeff Geerling Leanpub Inglês   Ansible: Up and Running Lorin Hochstein O’Reilly Inglês   Mastering Ansible Jesse Keating Packtpub Inglês    </description>
+    </item>
+    
+    <item>
+      <title>Cursos</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/cursos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/cursos/</guid>
+      <description>Segue uma relação de cursos disponíveis para o aprendizado do Ansible.
+   Título Autor Plataforma Idioma Nível Gratuito     Curso Ansible Jackson Lima School of Net Português Iniciante Não   Ansible Essentials: Simplicity in Automation Red Hat Inc. - Michelle Perz Udemy Inglês (com legendas) Iniciante Sim   Ansible for the Absolute Beginner - Hands-On Mumshad Mannambeth Udemy Inglês Iniciante Não   Mastering Ansible Chris Lunsford Udemy Inglês (com legendas) Qualquer Não   Ansible Advanced Mumshad Mannambeth Udemy Inglês Intermediário Não   Automation with Ansible I (DO407)  Oficial RedHat Online/Presencial Português Intermediário Não   Automation with Ansible II: Ansible Tower II (DO409) Oficial RedHat Online/Presencial Português Intermediário Não   Red Hat Certificate of Expertise in Ansible Automation (EX407) Oficial RedHat Presencial Português Avançado Não   Getting Started With Ansible: Key Concepts for Beginners Linux Academy Udemy Inglês Iniciante Sim   Hands-on Ansible Aaron Paxson Pluralsight Inglês Iniciante Não    </description>
+    </item>
+    
+    <item>
+      <title>Webinars</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/webinars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/webinars/</guid>
+      <description>Segue uma relação de cursos disponíveis para o aprendizado do Ansible.
+   Webinar Autores Idioma     AUTOMATING YOUR NETWORK Justin Nemmers, Peter Sprygada Inglês   ANSIBLE PLAYBOOKS USING NETWORK MODULES Peter Sprygada Inglês   EXECUTING CONFIGURATION CHANGES ON NETWORK DEVICES Peter Sprygada Inglês   ANSIBLE TIPS &amp;amp; TRICKS Brian Coca Inglês   WRITING MODULES FOR ANSIBLE James Cammarata Inglês   GETTING STARTED: MOVING FROM ANSIBLE CLI TO TOWER David Federlein Inglês   ANSIBLE TOWER BASICS: WORKFLOWS David Federlein Inglês   ASK AN EXPERT - WINDOWS Mark Phillips, Matt Davis Inlgês   ASK AN EXPERT - CONTAINER Chris Houseknecht, Greg DeKoenigsberg, Justin Nemmers, Joshua Ginsberg Inglês   LDAP AUTHENTICATION IN RED HAT ANSIBLE TOWER David Federlein, John Lieske Inglês   OUTROS Diversos Inglês    </description>
+    </item>
+    
+    <item>
+      <title>Sites de Referência</title>
+      <link>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/sites-referencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansible-br.github.io/primeiros-passos/materiais-de-estudo/sites-referencia/</guid>
+      <description>Segue uma relação de sites de referências disponíveis para o aprendizado do Ansible.
+   Site Autor Idioma     Documentação Oficial Ansible.com Inglês   Pesquisa Rápida da Documentação do Ansible DevDocs Inglês   DGMorales Diego Morales Português/Inglês   Code Your Infra Gustavo Inglês   Cisco Rede - Automation Networking Rodrigo Rovere Português   ChurrOps on DevOps Rodrigo Floriano Português   Tiago Costa Tiago Costa Português   Just Digital Renato Biancalana Português   Giovanni dos Reis Nunes Giovanni dos Reis Nunes Português    </description>
+    </item>
+    
+  </channel>
+</rss>
